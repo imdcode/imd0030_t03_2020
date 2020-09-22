@@ -4,6 +4,18 @@
 
 using namespace std;
 
+Turma::Turma (){
+	this->nome = "A definir";
+	this->id = "IMD????";
+}
+Turma::Turma (string nome, string id):nome(nome), id(id){}
+Turma::~Turma (){
+	for (int i = 0; i < this->capacidade; ++i)
+	{
+		delete this->alunos[i];
+	}
+}
+
 string 
 Turma::getNome(){
 	return this->nome;

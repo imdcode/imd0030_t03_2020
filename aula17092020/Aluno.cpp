@@ -1,4 +1,8 @@
-#include "Aluno.hpp"
+#include<iostream>
+
+#include "aluno.hpp"
+
+using namespace std;
 
 Aluno::Aluno (){
 	this->nome = "Indigente";
@@ -11,11 +15,14 @@ Aluno::Aluno (string nome, string cpf, int matricula,
 	this->matricula = matricula;
 	this->email = email;
 	this->telefone = telefone;
-}*/
+}
+*/
 Aluno::Aluno (string nome, string cpf, int matricula, 
 			string email, string telefone):nome(nome),cpf(cpf),
 			matricula(matricula),email(email),telefone(telefone){}
-Aluno::~Aluno (){}
+Aluno::~Aluno (){
+	cout << "Eu " << this->nome << " estou deixando esse mundo." << endl;
+}
 string 
 Aluno::getNome(){
 	return this->nome;

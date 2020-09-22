@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Aluno.hpp"
+#include "aluno.hpp"
 
 using namespace std;
 
@@ -15,5 +15,8 @@ int main()
 			<< " tel: " << novo.getTelefone() << endl;
 	cout << "Temos mais uma aluna: " << outro->getNome() 
 			<< " tel: " << outro->getTelefone() << endl;
+			
+	delete outro;
+
 	return 0;
 }
