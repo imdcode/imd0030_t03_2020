@@ -24,7 +24,7 @@ public:
 	int getMaxPulo();
 	int getDistancia();
 	int getPulos();
-	void pular();
+	int pular();
 };
 
 #endif

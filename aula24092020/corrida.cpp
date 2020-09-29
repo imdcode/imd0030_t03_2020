@@ -18,6 +18,10 @@ int
 Corrida::getDistancia(){
 	return this->distancia;
 }
+Sapo* 
+Corrida::getVencedor(){
+	return this->vencedor;
+}
 void 
 Corrida::addSapo(Sapo * novo){
 	if (this->concorrentes<MAX_SAPOS) {
@@ -32,6 +36,31 @@ Corrida::remSapo(string id){
 }
 void 
 Corrida::run(){
-	// TODO
-	cout << "A turma precisa aprender a fazer o proprio codigo!" << endl;
+	bool fim = false;
+	while (!fim) {
+		for (int i = 0; i < this->concorrentes; ++i)
+		{
+			//int pulou = 
+			this->sapos[i]->pular();
+			//cout << sapos[i]->getId() << " pulou +" 
+			//		<< pulou << " para uma distância de "
+			//		<< sapos[i]->getDistancia() << endl;
+			if (sapos[i]->getDistancia()>this->distancia){
+				fim = true;
+				this->vencedor = sapos[i];
+				break;
+			}
+
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+

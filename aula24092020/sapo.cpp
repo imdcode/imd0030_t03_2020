@@ -27,8 +27,10 @@ Sapo::getPulos(){
 	return this->pulos;
 }
 
-void 
+int 
 Sapo::pular(){
 	this->pulos++;
-	this->distancia += round(dis(gen));
+	int distancia_pulada = round(dis(gen));
+	this->distancia += distancia_pulada;
+	return distancia_pulada;
 }
