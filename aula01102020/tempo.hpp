@@ -11,6 +11,9 @@ public:
 	short getHoras();
 	short getMinutos();
 	short getSegundos();
+	Tempo somar(Tempo t);
+
+	Tempo operator+ (Tempo &t);
 };
 
 #endif
