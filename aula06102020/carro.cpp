@@ -1,7 +1,10 @@
 #include "carro.hpp"
 
-//Carro::Carro (double volumePortaMalas):
-//			volumePortaMalas(volumePortaMalas){}
+Carro::Carro (string cor, string modelo, string ano,
+			string placa, string proprietario,
+			double volumePortaMalas):
+			Veiculo(cor,modelo,ano,placa,proprietario),
+			volumePortaMalas(volumePortaMalas){}
 double 
 Carro::getVolumePortaMalas(){
 	return this->volumePortaMalas;
