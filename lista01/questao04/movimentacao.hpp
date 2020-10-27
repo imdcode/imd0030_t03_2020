@@ -13,7 +13,8 @@ enum TipoMovimentacao
 class Movimentacao
 {
 public:
-	Movimentacao(string descricao, double valor, TipoMovimentacao tipo);
+	Movimentacao(string descricao, double valor, 
+				TipoMovimentacao tipo);
 	~Movimentacao();
 	string getDescricao() const;
 	double getValor() const;
@@ -23,3 +24,5 @@ private:
 	double valor;
 	TipoMovimentacao tipo;
 };
+
+

@@ -1,7 +1,9 @@
 #include "movimentacao.hpp"
 
-Movimentacao::Movimentacao(string descricao, double valor, TipoMovimentacao tipo):
-						descricao(descricao), valor(valor), tipo(tipo){}
+Movimentacao::Movimentacao(string descricao, double valor, 
+						TipoMovimentacao tipo):
+						descricao(descricao), valor(valor), 
+						tipo(tipo){}
 Movimentacao::~Movimentacao(){}
 string 
 Movimentacao::getDescricao() const{

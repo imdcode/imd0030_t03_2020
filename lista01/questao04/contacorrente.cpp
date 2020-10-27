@@ -28,8 +28,10 @@ bool
 ContaCorrente::processaMovimentacao(Movimentacao& transacao){
 	if (transacao.getTipo()==tipoCredito) {
 		this->saldo += transacao.getValor();
+		//Todo: verificar e corrigir o limite se for o caso
 	} else if (transacao.getTipo()==tipoDebito) {
 		this->saldo -= transacao.getValor();
+		//Todo: verificar e corrigir o limite se for o caso
 	}
 	return true;
 }

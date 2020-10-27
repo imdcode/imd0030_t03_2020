@@ -13,6 +13,7 @@ enum TipoConta
 	contaNormal,
 	contaEspecial
 };
+
 class ContaCorrente
 {
 public:
