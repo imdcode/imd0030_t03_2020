@@ -6,6 +6,7 @@
 
 using std::stringstream;
 using std::ifstream;
+using std::ofstream;
 using std::string;
 using std::cout;
 using std::endl;
@@ -63,10 +64,12 @@ private:
 int main(int argc, char const *argv[])
 {
 	ifstream arqDados("media.dat");
+	ofstream arqMediasFinais("medias_finais.dat");
 	string linha;
 	string palavra;
 
 	while(arqDados >> linha) {
+		//cout << linha;
 		// quebrando a linha 
         stringstream s(linha); 
         vector <string> tokens; 
@@ -76,6 +79,7 @@ int main(int argc, char const *argv[])
         if (tokens.size() == 4) {
         	Aluno lido(tokens.at(0), stod(tokens.at(1)), stod(tokens.at(2)), stod(tokens.at(3)));
         	cout << lido << endl;
+        	arqMediasFinais << lido << endl;
         }
 	}
 	return 0;
